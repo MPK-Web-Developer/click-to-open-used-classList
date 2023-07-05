@@ -7,25 +7,69 @@
     <link rel="stylesheet" href="style.css" />
     <title>Modal window</title>
   </head>
-  <body>
-    <button class="show-modal">Show modal 1</button>
-    <button class="show-modal">Show modal 2</button>
-    <button class="show-modal">Show modal 3</button>
+  <!--========== Start  ==========-->
 
-    <div class="modal hidden">
-      <button class="close-modal">&times;</button>
-      <h1>I'm a modal window 😍</h1>
+  <!--========== End  ============-->
+  <body>
+    <a class="show-modal box-img d-block banner-item-link banner-item-1">01</a>
+    <a class="show-modal box-img d-block banner-item-link banner-item-2">02</a>
+    <a class="show-modal box-img d-block banner-item-link banner-item-3">03</a>
+
+    <div class="banner-popup popup-hidden">
+      <button class="close-popup">&times;</button>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0731/5646/0844/files/Steed-Inspiration.jpg?v=1688543349"
+        alt="_img"
+      />
+      <h2>Inspiration</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        <strong>Inspired by horses</strong> and their overpowering freedom
+        Ceeyes Mobility Solutions has introduced
+        <strong>Steed Chainless</strong> Bicycles, to provide a pleasant ride
+        with pride.
+      </p>
+      <p>
+        <strong>Steed means Spirited Horse</strong>
       </p>
     </div>
-    <div class="overlay hidden"></div>
+
+    <div class="banner-popup banner-popup-item-2 popup-hidden">
+      <button class="close-popup">&times;</button>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0731/5646/0844/files/Design-bord-image.jpg?v=1688545659"
+        alt="_img"
+      />
+      <h2>Design</h2>
+      <p>
+        STEED Frame designs are validated through Finite Element Analysis to
+        improve its overall performance by minimizing the mass of the frame and
+        increasing its load carrying capacity.<br />
+      </p>
+      <p>
+        STEED cycles frame, parts and sub assemblies are designed to meet
+        various height, reach requirements for different age groups. Assembling
+        is done virtually to ensure the fitness prior to manufacturing.
+      </p>
+    </div>
+    <div class="banner-popup banner-popup-item-3 popup-hidden">
+      <button class="close-popup">&times;</button>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0731/5646/0844/files/Design-bord-image.jpg?v=1688545659"
+        alt="_img"
+      />
+      <h2>Inspiration</h2>
+      <p>
+        <strong>Inspired by horses</strong> and their overpowering freedom
+        Ceeyes Mobility Solutions has introduced
+        <strong>Steed Chainless</strong> Bicycles, to provide a pleasant ride
+        with pride.
+      </p>
+      <p>
+        <strong>Steed means Spirited Horse</strong>
+      </p>
+    </div>
+
+    <div class="popup-overlay popup-hidden"></div>
 
     <script src="script.js"></script>
   </body>

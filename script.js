@@ -1,35 +1,27 @@
-'use strict';
+const bannerItemLink = document.querySelectorAll('.banner-item-link');
+const bannerPopupAll = document.querySelectorAll('.banner-popup');
+const closePopupAll = document.querySelectorAll('.close-popup');
+const popupOverlay = document.querySelector('.popup-overlay');
 
-const showModal = document.querySelectorAll('.show-modal');
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const closeBtn = document.querySelector('.close-modal');
-
-const clickToOpen = function () {
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
-const clickToClose = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
-
-for (let i = 0; i < showModal.length; i++) {
-  showModal[i].addEventListener('click', clickToOpen);
-}
-
-closeBtn.addEventListener('click', clickToClose);
-overlay.addEventListener('click', clickToClose);
-
-document.addEventListener('keydown', function (event) {
-  console.log(event.key);
-
-  if (event.key === 'Escape') {
-    if (!modal.classList.contains('hidden')) {
-      console.log(!modal.classList.contains('hidden'));
-      clickToClose();
-    }
-  }
+bannerItemLink.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    bannerPopupAll.forEach(item => {
+      !item.classList.contains('popup-hidden')
+        ? item.classList.add('popup-hidden')
+        : '';
+      popupOverlay.classList.add('popup-hidden');
+    });
+    bannerPopupAll[index].classList.contains('popup-hidden')
+      ? bannerPopupAll[index].classList.remove('popup-hidden')
+      : '';
+    popupOverlay.classList.remove('popup-hidden');
+  });
 });
-
-console.log(!modal.classList.contains('hidden'));
+closePopupAll.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    !bannerPopupAll[index].classList.contains('popup-hidden')
+      ? bannerPopupAll[index].classList.add('popup-hidden')
+      : '';
+    popupOverlay.classList.add('popup-hidden');
+  });
+});
